@@ -39,4 +39,7 @@ public class Usuario {
         this.telefono = telefono;
     }
 
+    public long getId() {
+        return id;
+    }
 }

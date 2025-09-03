@@ -4,12 +4,15 @@ public class PrestamoManager {
     private String fechaDevolucion;
     private String estadoPrestamo;
     private static long contador = 0;
+    private Libro libro;
+    private Usuario usuario;
 
-    public PrestamoManager(String fechaPrestamo, String fechaDevolucion, String estadoPrestamo) {
+    public PrestamoManager(String fechaPrestamo, String estadoPrestamo, Libro libro, Usuario usuario) {
         this.idPrestamo = contador++;
         this.fechaPrestamo = fechaPrestamo;
-        this.fechaDevolucion = fechaDevolucion;
         this.estadoPrestamo = estadoPrestamo;
+        this.libro = libro;
+        this.usuario = usuario;
     }
 
     public String getFechaPrestamo() {
@@ -38,5 +41,21 @@ public class PrestamoManager {
 
     public long getIdPrestamo() {
         return idPrestamo;
+    }
+
+    public Libro getLibro() {
+        return libro;
+    }
+
+    public void setLibro(Libro libro) {
+        this.libro = libro;
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
     }
 }

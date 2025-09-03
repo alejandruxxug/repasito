@@ -39,4 +39,8 @@ public class Autor {
     public void anadirLibro(Libro libro) {
         libros.add(libro);
     }
+
+    public int contarLibros() {
+        return libros.size();
+    }
 }
